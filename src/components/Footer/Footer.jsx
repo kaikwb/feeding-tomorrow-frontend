@@ -3,6 +3,8 @@ import {Box, Container, Grid, Link, Typography} from "@mui/material";
 import PropTypes from "prop-types";
 
 export default function Footer(props) {
+    const {members, siteMap, socialNetworks, address, copyrightYear, copyrightName} = props;
+
     return (
         <Box
             component="footer"
@@ -18,7 +20,7 @@ export default function Footer(props) {
                         <Typography variant="h6" gutterBottom>
                             Integrantes do Grupo
                         </Typography>
-                        {props.members.map((member) => (
+                        {members.map((member) => (
                             <Box
                                 key={member.id}
                                 sx={{
@@ -36,7 +38,7 @@ export default function Footer(props) {
                             <Typography variant="h6" gutterBottom>
                                 Mapa do Site
                             </Typography>
-                            {props.siteMap.map((item) => (
+                            {siteMap.map((item) => (
                                 <Typography component={Link} href={item.link} key={item.label}
                                             sx={{textDecoration: "none"}}>
                                     {item.label}
@@ -49,7 +51,7 @@ export default function Footer(props) {
                             <Typography variant="h6" gutterBottom>
                                 Redes Sociais
                             </Typography>
-                            {props.socialNetworks.map((network) => (
+                            {socialNetworks.map((network) => (
                                 <Link
                                     key={network.name}
                                     href={network.link}
@@ -73,20 +75,20 @@ export default function Footer(props) {
                             Endereço
                         </Typography>
                         <Typography>
-                            {props.address.street}, {props.address.number}
+                            {address.street}, {address.number}
                         </Typography>
-                        <Typography>{props.address.address2}</Typography>
+                        <Typography>{address.address2}</Typography>
                         <Typography>
-                            {props.address.neighborhood}, {props.address.postalCode}
+                            {address.neighborhood}, {address.postalCode}
                         </Typography>
                         <Typography>
-                            {props.address.city} - {props.address.state}
+                            {address.city} - {address.state}
                         </Typography>
                     </Grid>
                 </Grid>
                 <Box mt={2}>
                     <Typography variant="body2" color="textSecondary" align="center">
-                        © {props.copyrightYear} {props.copyrightName}. Todos os direitos reservados.
+                        © {copyrightYear} {copyrightName}. Todos os direitos reservados.
                     </Typography>
                 </Box>
             </Container>

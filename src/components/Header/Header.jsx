@@ -17,6 +17,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import PropTypes from "prop-types";
 
 export default function Header(props) {
+    const {logo, navMenuOptions, userMenuOptions} = props;
+
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -39,7 +41,7 @@ export default function Header(props) {
         <AppBar position="static">
             <Container maxWidth="lg">
                 <Toolbar disableGutters>
-                    <Box component="img" src={props.logo} alt="Logo"
+                    <Box component="img" src={logo} alt="Logo"
                          sx={{display: {xs: "none", md: "flex"}, mr: 1, height: 40}}/>
 
                     <Box sx={{flexGrow: 1, display: {xs: "flex", md: "none"}}}>
@@ -71,7 +73,7 @@ export default function Header(props) {
                                 display: {xs: "block", md: "none"}
                             }}
                         >
-                            {props.navMenuOptions.map((navOption) => (
+                            {navMenuOptions.map((navOption) => (
                                 <MenuItem component={Link} href={navOption.link} key={navOption.label}
                                           onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">{navOption.label}</Typography>
@@ -80,11 +82,11 @@ export default function Header(props) {
                         </Menu>
                     </Box>
 
-                    <Box component="img" src={props.logo} alt="Logo"
+                    <Box component="img" src={logo} alt="Logo"
                          sx={{display: {xs: "flex", md: "none"}, mr: 2, height: 40, width: 1}}/>
 
                     <Box sx={{flexGrow: 1, display: {xs: "none", md: "flex"}}}>
-                        {props.navMenuOptions.map((navOption) => (
+                        {navMenuOptions.map((navOption) => (
                             <Button
                                 component={Link}
                                 href={navOption.link}
@@ -119,7 +121,7 @@ export default function Header(props) {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            {props.userMenuOptions.map((userOption) => (
+                            {userMenuOptions.map((userOption) => (
                                 <MenuItem component={Link} href={userOption.link} key={userOption.label}
                                           onClick={handleCloseUserMenu}>
                                     <Typography textAlign="center">{userOption.label}</Typography>

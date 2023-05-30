@@ -1,15 +1,10 @@
-export const navMenuOptions = [
+import Mission from "../pages/Mission/Mission.jsx";
+
+export const pages = [
     {
-        "label": "Products",
-        "link": "/products"
-    },
-    {
-        "label": "Pricing",
-        "link": "/pricing"
-    },
-    {
-        "label": "Blog",
-        "link": "/blog"
+        "label": "A missão",
+        "link": "/mission",
+        "element": <Mission/>
     }
 ];
 
