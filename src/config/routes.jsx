@@ -1,5 +1,6 @@
 import Mission from "../pages/Mission/Mission.jsx";
 import Challenge from "../pages/Challenge/Challenge.jsx";
+import Sustainability from "../pages/Sustainability/Sustainability.jsx";
 
 export const pages = [
     {
@@ -11,6 +12,11 @@ export const pages = [
         "label": "O desafio",
         "link": "/challenge",
         "element": <Challenge/>
+    },
+    {
+        "label": "Desenvolvimento sustentável",
+        "link": "/sustainability",
+        "element": <Sustainability/>
     }
 ];
 
