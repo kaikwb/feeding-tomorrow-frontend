@@ -1,10 +1,16 @@
 import Mission from "../pages/Mission/Mission.jsx";
+import Challenge from "../pages/Challenge/Challenge.jsx";
 
 export const pages = [
     {
         "label": "A missão",
         "link": "/mission",
         "element": <Mission/>
+    },
+    {
+        "label": "O desafio",
+        "link": "/challenge",
+        "element": <Challenge/>
     }
 ];
 

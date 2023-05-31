@@ -7,7 +7,16 @@ export default function ArticleContent(props) {
 
     return (
         <Paper elevation={8}
-               sx={{width: "auto", maxWidth: {xs: 1, md: "md"}, my: 2, flexGrow: 1, py: 2, px: 5, mx: "auto", backgroundColor: "rgba(255, 255, 255, 0.6)"}}>
+               sx={{
+                   width: "auto",
+                   maxWidth: {xs: 1, md: "md"},
+                   my: 2,
+                   flexGrow: 1,
+                   py: 2,
+                   px: 5,
+                   mx: "auto",
+                   backgroundColor: "rgba(255, 255, 255, 0.6)"
+               }}>
             <Typography align="center" variant="h3">{title}</Typography>
             <Typography variant="subtitle1" sx={{px: 2, my: 3, color: "gray"}}>{subtitle}</Typography>
             <Divider variant="middle" sx={{mb: 6}}/>
