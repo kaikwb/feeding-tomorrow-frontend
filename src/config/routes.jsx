@@ -1,6 +1,7 @@
 import Mission from "../pages/Mission/Mission.jsx";
 import Challenge from "../pages/Challenge/Challenge.jsx";
 import Sustainability from "../pages/Sustainability/Sustainability.jsx";
+import Distribution from "../pages/Distribution/Distribution.jsx";
 
 export const pages = [
     {
@@ -17,6 +18,11 @@ export const pages = [
         "label": "Desenvolvimento sustentável",
         "link": "/sustainability",
         "element": <Sustainability/>
+    },
+    {
+        "label": "Do campo a mesa",
+        "link": "/distribution",
+        "element": <Distribution/>
     }
 ];
 
