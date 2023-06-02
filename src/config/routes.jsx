@@ -2,6 +2,7 @@ import Mission from "../pages/Mission/Mission.jsx";
 import Challenge from "../pages/Challenge/Challenge.jsx";
 import Sustainability from "../pages/Sustainability/Sustainability.jsx";
 import Distribution from "../pages/Distribution/Distribution.jsx";
+import QuestionsAndAnswers from "../pages/QuestionsAndAnswersPage/QuestionsAndAnswers.jsx";
 
 export const pages = [
     {
@@ -23,6 +24,11 @@ export const pages = [
         "label": "Do campo a mesa",
         "link": "/distribution",
         "element": <Distribution/>
+    },
+    {
+        "label": "Perguntas e respostas",
+        "link": "/questions",
+        "element": <QuestionsAndAnswers/>
     }
 ];
 
