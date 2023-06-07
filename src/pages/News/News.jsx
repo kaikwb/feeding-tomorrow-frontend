@@ -31,7 +31,7 @@ export default function News() {
 
     useEffect(() => {
         async function fetchData() {
-            const result = await getNews(currentPage, newsPerPage);
+            const result = await getNews();
             console.log(result);
             setNews(cleanTitles(result));
         }

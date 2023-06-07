@@ -22,10 +22,11 @@ async function getQuestionsAndAnswers() {
     }
 }
 
-async function makeQuestion(question, author) {
+async function makeQuestion(question, author, mail) {
     const data = {
         question,
-        askedBy: author
+        askedBy: author,
+        mail
     };
 
     try {
@@ -41,6 +42,7 @@ export default function QuestionsAndAnswers() {
     const [openForm, setOpenForm] = useState(false);
     const [question, setQuestion] = useState("");
     const [author, setAuthor] = useState("");
+    const [mail, setMail] = useState("");
     const [openSuccessDialog, setOpenSuccessDialog] = useState(false);
     const [openErrorDialog, setOpenErrorDialog] = useState(false);
 
@@ -53,7 +55,7 @@ export default function QuestionsAndAnswers() {
     }
 
     const handleMakeQuestion = async () => {
-        const success = await makeQuestion(question, author);
+        const success = await makeQuestion(question, author, mail);
         setOpenForm(false);
 
         if (success) {
@@ -76,6 +78,10 @@ export default function QuestionsAndAnswers() {
 
     const handleAuthorChange = (event) => {
         setAuthor(event.target.value);
+    }
+
+    const handleMailChange = (event) => {
+        setMail(event.target.value);
     }
 
     useEffect(() => {
@@ -107,6 +113,8 @@ export default function QuestionsAndAnswers() {
                         ela.</DialogContentText>
                     <TextField autoFocus margin="dense" id="author" label="Seu nome" type="text" fullWidth
                                variant="standard" onChange={handleAuthorChange}/>
+                    <TextField autoFocus margin="dense" id="mail" label="Seu email" type="text" fullWidth
+                               variant="standard" onChange={handleMailChange}/>
                     <TextField autoFocus margin="dense" id="question" label="Pergunta" type="text" fullWidth
                                variant="standard" onChange={handleQuestionChange}/>
                 </DialogContent>
