@@ -92,7 +92,7 @@ export default function Header(props) {
                                 href={navOption.link}
                                 key={navOption.label}
                                 onClick={handleCloseNavMenu}
-                                sx={{my: 2, color: "white", display: "block"}}
+                                sx={{my: 2, color: "white", display: "block", textAlign: "center"}}
                             >
                                 {navOption.label}
                             </Button>
