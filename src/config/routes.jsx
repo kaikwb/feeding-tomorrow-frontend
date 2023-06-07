@@ -4,8 +4,14 @@ import Sustainability from "../pages/Sustainability/Sustainability.jsx";
 import Distribution from "../pages/Distribution/Distribution.jsx";
 import QuestionsAndAnswers from "../pages/QuestionsAndAnswersPage/QuestionsAndAnswers.jsx";
 import News from "../pages/News/News.jsx";
+import Home from "../pages/Home/Home.jsx";
 
 export const pages = [
+    {
+        "label": "Home",
+        "link": "/",
+        "element": <Home/>
+    },
     {
         "label": "A missão",
         "link": "/mission",
