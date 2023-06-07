@@ -3,6 +3,7 @@ import Challenge from "../pages/Challenge/Challenge.jsx";
 import Sustainability from "../pages/Sustainability/Sustainability.jsx";
 import Distribution from "../pages/Distribution/Distribution.jsx";
 import QuestionsAndAnswers from "../pages/QuestionsAndAnswersPage/QuestionsAndAnswers.jsx";
+import News from "../pages/News/News.jsx";
 
 export const pages = [
     {
@@ -29,6 +30,11 @@ export const pages = [
         "label": "Perguntas e respostas",
         "link": "/questions",
         "element": <QuestionsAndAnswers/>
+    },
+    {
+        "label": "Notícias",
+        "link": "/news",
+        "element": <News/>
     }
 ];
 
